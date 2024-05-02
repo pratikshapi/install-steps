@@ -2,3 +2,5 @@
 - install git
 - add steps to connect and interact with the ui
 - .bashrc instead of .zshrc
+- which conda, only if nto there
+- rosetta isntall - gui steps

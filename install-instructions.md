@@ -18,6 +18,7 @@ bash ~/Downloads/Anaconda3-2022.05-MacOSX-x86_64.sh
 ## Step 3: Installing LSL
 Install the LabStreamingLayer (LSL) using Homebrew and set the environment variable:
 ```bash
+conda create -n muse python=3.11
 conda install -c conda-forge liblsl
 # These steps are not required if you have installed via conda (which is platform independent)
 # brew install labstreaminglayer/tap/lsl
