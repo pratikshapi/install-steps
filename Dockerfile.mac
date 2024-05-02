@@ -1,0 +1,3 @@
+# Use a base macOS image
+FROM sickcodes/docker-osx:latest
+CMD [ "sleep", "infinity" ]
