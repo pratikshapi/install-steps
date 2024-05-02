@@ -31,7 +31,7 @@ Install Git using Homebrew:
 brew install git
 ```
 
-## Step 3: Installing Node.js
+## Step 4: Installing Node.js
 Install Node.js using Homebrew and set up the environment:
 ```bash
 brew install node@18
