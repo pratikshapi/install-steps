@@ -22,7 +22,6 @@ conda create -n muse python=3.11 -y
 conda activate muse
 conda install -c conda-forge liblsl
 pip install pylsl
-pip install muselsl
 pip install --no-cache-dir git+https://github.com/pratikshapi/muse-lsl.git
 echo 'conda activate muse' >> ~/.zshrc
 source ~/.zshrc
