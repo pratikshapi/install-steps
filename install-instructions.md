@@ -35,8 +35,14 @@ brew install git
 Install Node.js using Homebrew and set up the environment:
 ```bash
 brew install node@18
-echo 'export PATH="/opt/homebrew/opt/node@18/bin:$PATH"' >> ~/.bashrc
-source ~/.bashrc
+# the following command will appear at the end of installation of node@18, please verify and run it
+echo 'export PATH="/opt/homebrew/opt/node@18/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+```
+Test if the node got installed using these commands
+```bash
+node -v
+npm -v
 ```
 ## Step 5: Install dependencies for Human
 Install the necessary packages for Human:
