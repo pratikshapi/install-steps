@@ -1,6 +1,10 @@
 # Environment Setup and Project Execution Guide
 
-## Step 1: Installing Homebrew
+## Step 0: Setting up Rosetta Emulator
+Kill all the instances of Terminal using Force quit -> Applications -> Get Info -> Open using Rosetta
+
+arch -x86_64 bash  
+## Step 1: Installing Homebrew and conda
 Check if Homebrew is installed and install if it's not available:
 ```bash
 which brew || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -11,7 +15,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 ## Step 2: Installing Conda
 Start a Rosetta emulated environment and install Anaconda for managing Python versions and packages.
 ```bash
-arch -x86_64 bash  # Start Rosetta emulator
 # Install Anaconda (Assuming Anaconda installer is downloaded)
 bash ~/Downloads/Anaconda3-2022.05-MacOSX-x86_64.sh
 ```
