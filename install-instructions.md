@@ -2,12 +2,16 @@
 
 ## Step 0: Setting up Rosetta Emulator
 Kill all the instances of Terminal using Force quit -> Applications -> Get Info -> Open using Rosetta
-
+Alternatively you can use this command though it will kill all the terminal instances
+```bash
 arch -x86_64 bash  
+```
+
 ## Step 1: Installing Homebrew and conda
 Check if Homebrew is installed and install if it's not available:
 ```bash
 which brew || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# The following command will appear at the end of installation of Homebrew, please verify and run it
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
@@ -16,7 +20,8 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 Start a Rosetta emulated environment and install Anaconda for managing Python versions and packages.
 ```bash
 # Install Anaconda (Assuming Anaconda installer is downloaded)
-bash ~/Downloads/Anaconda3-2022.05-MacOSX-x86_64.sh
+curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
+bash Miniconda3-latest-MacOSX-x86_64.sh
 ```
 ## Step 3: Installing LSL
 Install the LabStreamingLayer (LSL) using Homebrew and set the environment variable:
