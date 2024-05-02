@@ -1,0 +1,6 @@
+- server runs on port 3000
+- client runs on port 8000
+- server is run using the command `node server.js`. This command is run from inside the human/demo folder. To get to the human/demo folder, we need to navigate using `cd human/demo`
+- client is run using the command `npm run dev`. This command is run from inside the human folder. To get to the human folder, we need to navigate using `cd human`
+- when we change something in human/demo/index.js we need to restart the server using `node server.js`
+- 

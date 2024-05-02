@@ -74,7 +74,7 @@ We use two different terminals to run the demo. In the first terminal, navigate 
 ```bash
 cd demo
 npm install -g nodeman
-nodeman server.js
+node server.js
 ```
 In the second terminal, navigate to the `human` folder and run the development client:
 ```bash
