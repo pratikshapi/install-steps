@@ -21,6 +21,11 @@ Install the LabStreamingLayer (LSL) using Homebrew and set the environment varia
 conda create -n muse python=3.11 -y
 conda activate muse
 conda install -c conda-forge liblsl
+pip install pylsl
+pip install muselsl
+pip install --no-cache-dir git+https://github.com/pratikshapi/muse-lsl.git
+echo 'conda activate muse' >> ~/.zshrc
+source ~/.zshrc
 # These steps are not required if you have installed via conda (which is platform independent)
 # brew install labstreaminglayer/tap/lsl
 # export DYLD_LIBRARY_PATH=/opt/homebrew/lib
@@ -57,6 +62,10 @@ Clone the Human repository and install necessary Node packages:
 ```bash
 git clone https://github.com/Neuronext/human
 cd human
+# if 
+npm rebuild @tensorflow/tfjs-node-gpu --build-from-source
+npm rebuild @tensorflow/tfjs-node --build-from-source 
+# comment  out the above lines from package.json and then run npm install if you are using mac m2
 npm install
 ```
 
