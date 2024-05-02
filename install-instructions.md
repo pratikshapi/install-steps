@@ -21,7 +21,10 @@ Start a Rosetta emulated environment and install Anaconda for managing Python ve
 ```bash
 # Install Anaconda (Assuming Anaconda installer is downloaded)
 curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
+chmod +x Miniconda3-latest-MacOSX-x86_64.sh
 bash Miniconda3-latest-MacOSX-x86_64.sh
+# Please export the path. Please replace <username> with your username. To get the username run `whoami` in terminal
+export PATH="/Users/<username>/minconda3/bin:$PATH"
 ```
 ## Step 3: Installing LSL
 Install the LabStreamingLayer (LSL) using Homebrew and set the environment variable:
