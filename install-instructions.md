@@ -18,11 +18,17 @@ bash ~/Downloads/Anaconda3-2022.05-MacOSX-x86_64.sh
 ## Step 3: Installing LSL
 Install the LabStreamingLayer (LSL) using Homebrew and set the environment variable:
 ```bash
-conda create -n muse python=3.11
+conda create -n muse python=3.11 -y
+conda activate muse
 conda install -c conda-forge liblsl
 # These steps are not required if you have installed via conda (which is platform independent)
 # brew install labstreaminglayer/tap/lsl
 # export DYLD_LIBRARY_PATH=/opt/homebrew/lib
+```
+## Step 3: Install Git
+Install Git using Homebrew:
+```bash
+brew install git
 ```
 
 ## Step 3: Installing Node.js
