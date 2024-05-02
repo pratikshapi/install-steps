@@ -28,15 +28,15 @@ conda install -c conda-forge liblsl
 Install Node.js using Homebrew and set up the environment:
 ```bash
 brew install node@18
-echo 'export PATH="/opt/homebrew/opt/node@18/bin:$PATH"' >> ~/.zshrc
-source ~/.zshrc
+echo 'export PATH="/opt/homebrew/opt/node@18/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
 ```
 ## Step 5: Install dependencies for Human
 Install the necessary packages for Human:
 ```bash
 brew install pkg-config cairo pango libpng jpeg giflib librsvg
-echo 'export PATH="/opt/homebrew/opt/jpeg/bin:$PATH"' >> ~/.zshrc
-source ~/.zshrc
+echo 'export PATH="/opt/homebrew/opt/jpeg/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
 ```
 
 ## Step 6: Cloning and Setting up the Human Repository
