@@ -1,38 +1,43 @@
-- test if brew is available
+Steps tested:
+Install brew:
+- test if brew is available using `which brew`
 - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-- (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/arch/.bashrc
-- eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-- test if python and pip are available
-- python -m ensurepip
-- brew install dpkg
-
-echo 'export PATH="/home/linuxbrew/.linuxbrew/opt/dpkg/bin:$PATH"' >> /home/arch/.bash_profile
-export LDFLAGS="-L/home/linuxbrew/.linuxbrew/opt/dpkg/lib"
-export PKG_CONFIG_PATH="/home/linuxbrew/.linuxbrew/opt/dpkg/lib/pkgconfig"
-source /home/arch/.bash_profile
-- echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
-source ~/.bash_profile
-- wget -O liblsl.deb https://github.com/sccn/liblsl/releases/download/v1.16.2/liblsl-1.16.2-jammy_amd64.deb && sudo dpkg -i liblsl.deb && rm liblsl.deb
-- python -m pip install pylsl
-- python -m pip instal muselsl
-
-- edit .bashrc to include `source ~/.bash_profile`
 
 
-sudo pacman -Sy base-devel
+    (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/DATA/.zprofile
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+which brew
+/opt/homebrew/bin/brew 
 
-
-- brew install node@18
-
-Install prerequisites: for md5
-sudo pacman -S coreutils
-sudo pacman -Syu
-sudo pacman -S glibc
 
 Install conda:
-- curl -LO https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
-chmod +x Miniconda3-latest-MacOSX-x86_64.sh
+start a rosetta emulated env
+install anaconda 
+install python and pip 
+brew install labstreaminglayer/tap/lsl
+export DYLD_LIBRARY_PATH=/opt/homebrew/lib
+
+conda install -c conda-forge liblsl
+arch -x86_64 python
+conda create -n muse python=3.11
+
+- brew install node@18
+echo 'export PATH="/opt/homebrew/opt/node@18/bin:$PATH"' >> ~/.zshrc
 
 
+source ~/.zshrc
 
+npm install -g nodeman
+git clone human 
+go to human
+brew install pkg-config
 
+brew install pkg-config
+brew install pixman
+brew install cairo
+brew install pkg-config cairo pango libpng jpeg giflib librsvg
+echo 'export PATH="/opt/homebrew/opt/jpeg/bin:$PATH"' >> ~/.zshrc
+
+npm install
+demo folder - node server.js
+human folder - npm run dev
