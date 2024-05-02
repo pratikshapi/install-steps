@@ -48,8 +48,8 @@ npm -v
 Install the necessary packages for Human:
 ```bash
 brew install pkg-config cairo pango libpng jpeg giflib librsvg
-echo 'export PATH="/opt/homebrew/opt/jpeg/bin:$PATH"' >> ~/.bashrc
-source ~/.bashrc
+echo 'export PATH="/opt/homebrew/opt/jpeg/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
 ```
 
 ## Step 6: Cloning and Setting up the Human Repository
