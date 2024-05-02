@@ -25,7 +25,10 @@ chmod +x Miniconda3-latest-MacOSX-x86_64.sh
 bash Miniconda3-latest-MacOSX-x86_64.sh
 # Please export the path. Please replace <username> with your username. To get the username run `whoami` in terminal
 export PATH="/Users/<username>/minconda3/bin:$PATH"
+conda init
 ```
+Now restart the terminal again for conda to take effect.
+
 ## Step 3: Installing LSL
 Install the LabStreamingLayer (LSL) using Homebrew and set the environment variable:
 ```bash
@@ -63,6 +66,7 @@ npm -v
 Install the necessary packages for Human:
 ```bash
 brew install pkg-config cairo pango libpng jpeg giflib librsvg
+# check if there are any export statement like below, add it to .zshrc and then source the .zshrc file
 echo 'export PATH="/opt/homebrew/opt/jpeg/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 ```
@@ -72,10 +76,16 @@ Clone the Human repository and install necessary Node packages:
 ```bash
 git clone https://github.com/Neuronext/human
 cd human
-# if 
+# Try running the following.
+npm install
+```
+
+We have found some issues in installing tfjs-node-gpu, tfjs-node so might have to manually follow these stpes
+- Go to package.json and remove the tfjs-node-gpu and tfjs-node dependencies
+- Run the following commands
+```bash
 npm rebuild @tensorflow/tfjs-node-gpu --build-from-source
 npm rebuild @tensorflow/tfjs-node --build-from-source 
-# comment  out the above lines from package.json and then run npm install if you are using mac m2
 npm install
 ```
 
@@ -83,9 +93,10 @@ npm install
 We use two different terminals to run the demo. In the first terminal, navigate to the `demo` folder and run the server:
 ```bash
 cd demo
-npm install -g nodeman
-node server.js
+npm install -g nodemon
+nodemon server.js
 ```
+If `nodemon` does not work you can simply run `node server.js`
 In the second terminal, navigate to the `human` folder and run the development client:
 ```bash
 cd ../human
